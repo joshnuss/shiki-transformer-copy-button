@@ -33,6 +33,10 @@ export async function highlight(code, lang) {
 Add some basic styling:
 
 ```css
+pre:has(code) {
+  position: relative;
+}
+
 pre button.copy {
   position: absolute;
   right: 16px;
