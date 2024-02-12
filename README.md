@@ -41,8 +41,9 @@ pre button.copy {
   position: absolute;
   right: 16px;
   top: 16px;
-  height: 38px;
-  width: 38px;
+  height: 28px;
+  width: 28px;
+  padding: 0;
   display: flex;
 
   & span {
