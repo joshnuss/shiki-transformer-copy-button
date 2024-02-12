@@ -1,7 +1,8 @@
 Shiki Copy Button
 -----------------
 
-Transformer that adds a Copy button to Shiki.
+[Shiki](https://shiki.style) Transformer that adds a Copy button to `<code>` elements.
+
 
 ## Setup
 
@@ -21,8 +22,7 @@ export async function highlight(code, lang) {
   return await codeToHtml(code, {
     lang,
     transformers: [
-      // add transformer
-      addCopyButton(code),
+      addCopyButton(code)
     ]
   })
 }
