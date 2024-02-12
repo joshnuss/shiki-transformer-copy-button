@@ -1,0 +1,8 @@
+{
+  "name": "shiki-transformer-copy-button",
+  "version": "0.0.1",
+  "type": "module",
+  "dependencies": {
+    "hastscript": "^9.0.0"
+  }
+}
