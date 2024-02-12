@@ -1,10 +1,10 @@
 Shiki Copy Button
 -----------------
 
-[Shiki Transformer](https://shiki.style/guide/transformers) that adds a Copy button to `<code>` elements.
+[Shiki Transformer](https://shiki.style/guide/transformers) that adds a Copy button to `<pre>` elements.
 
 
-## Setup
+## Install
 
 Install the package:
 
@@ -28,7 +28,7 @@ export async function highlight(code, lang) {
 }
 ```
 
-## Styling
+## Style
 
 Add some basic styling:
 
