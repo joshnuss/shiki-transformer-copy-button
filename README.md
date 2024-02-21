@@ -75,6 +75,17 @@ pre button.copy {
 }
 
 ```
+## Troubleshooting TypeScript Error
+
+If you're using TypeScript and encounter the error: Cannot find module 'shiki-transformer-copy-button' or its corresponding type declarations, you can follow these steps to resolve it:
+
+Create a `shiki-transformer-copy-button.d.ts` declaration file in your `src` directory and inside it paste the following code:
+
+```ts
+declare module 'shiki-transformer-copy-button'
+```
+The error should now be resolved.
+
 
 ## License
 
