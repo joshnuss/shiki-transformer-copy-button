@@ -18,11 +18,17 @@ Add the transformer:
 import { codeToHtml } from 'shiki/bundle/full'
 import { addCopyButton } from 'shiki-transformer-copy-button'
 
+// optionally add options
+const options = {
+  // delay time from "copied" state back to normal state
+  toggle: 2000,
+}
+
 export async function highlight(code, lang) {
   return await codeToHtml(code, {
     lang,
     transformers: [
-      addCopyButton(code)
+      addCopyButton(options)
     ]
   })
 }
