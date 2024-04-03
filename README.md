@@ -18,7 +18,7 @@ Add the transformer:
 import { codeToHtml } from 'shiki/bundle/full'
 import { addCopyButton } from 'shiki-transformer-copy-button'
 
-// optional add options
+// optional
 const options = {
   // delay time from "copied" state back to normal state
   toggle: 2000,
