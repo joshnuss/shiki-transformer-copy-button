@@ -1,6 +1,6 @@
 import { h } from 'hastscript'
 
-export function addCopyButton(code, options = {}) {
+export function addCopyButton(options = {}) {
   const toggleMs = options.toggle || 3000
 
   return {
@@ -8,7 +8,7 @@ export function addCopyButton(code, options = {}) {
     pre(node) {
       const button = h('button', {
         class: 'copy',
-        "data-code": code,
+        "data-code": this.source,
         onclick: `
           navigator.clipboard.writeText(this.dataset.code);
           this.classList.add('copied');
