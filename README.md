@@ -1,7 +1,7 @@
 Shiki Copy Button
 -----------------
 
-[Shiki Transformer](https://shiki.style/guide/transformers) that adds a Copy button to `<pre>` elements.
+A [Shiki Transformer](https://shiki.style/guide/transformers) that adds a Copy button.
 
 
 ## Install
