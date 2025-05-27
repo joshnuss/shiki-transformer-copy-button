@@ -3,16 +3,21 @@
   "version": "0.0.4",
   "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "tsc --watch",
-    "check": "tsc --noEmit",
+    "check": "tsc --noEmit && publint",
     "build": "tsc"
+  },
+  "exports": {
+    ".": "./dist/index.js"
   },
   "dependencies": {
     "hastscript": "^9.0.0"
   },
   "devDependencies": {
     "@shikijs/types": "^3.4.2",
+    "publint": "^0.3.12",
     "typescript": "^5.8.3"
   }
 }
