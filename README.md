@@ -79,7 +79,14 @@ pre button.copy {
     }
   }
 }
+```
 
+## Publish package
+
+Bump version, then build and publish:
+
+```
+pnpm build && pnpm publish
 ```
 
 ## License

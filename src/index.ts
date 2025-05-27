@@ -1,6 +1,11 @@
 import { h } from 'hastscript'
+import type { ShikiTransformer } from '@shikijs/types'
 
-export function addCopyButton(options = {}) {
+export type Options = {
+  toggle?: number
+}
+
+export function addCopyButton(options: Options = {}): ShikiTransformer {
   const toggleMs = options.toggle || 3000
 
   return {

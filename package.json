@@ -2,8 +2,17 @@
   "name": "shiki-transformer-copy-button",
   "version": "0.0.3",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "check": "tsc --noEmit",
+    "build": "tsc"
+  },
   "dependencies": {
     "hastscript": "^9.0.0"
+  },
+  "devDependencies": {
+    "@shikijs/types": "^3.4.2",
+    "typescript": "^5.8.3"
   }
 }
