@@ -1,8 +1,6 @@
-Shiki Copy Button
------------------
+## Shiki Copy Button
 
 A [Shiki Transformer](https://shiki.style/guide/transformers) that adds a Copy button.
-
 
 ## Install
 
@@ -21,15 +19,13 @@ import { addCopyButton } from 'shiki-transformer-copy-button'
 // optional
 const options = {
   // delay time from "copied" state back to normal state
-  toggle: 2000,
+  toggle: 2000
 }
 
 export async function highlight(code, lang) {
   return await codeToHtml(code, {
     lang,
-    transformers: [
-      addCopyButton(options)
-    ]
+    transformers: [addCopyButton(options)]
   })
 }
 ```
@@ -66,7 +62,7 @@ pre button.copy {
 
   & .success {
     display: none;
-    background-image: url(/icons/copy-success.svg); 
+    background-image: url(/icons/copy-success.svg);
   }
 
   &.copied {
