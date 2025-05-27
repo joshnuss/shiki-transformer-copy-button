@@ -8,7 +8,8 @@
     "dev": "tsc --watch",
     "check": "tsc --noEmit && publint",
     "build": "tsc",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "format": "prettier --check ."
   },
   "exports": {
     ".": "./dist/index.js"
@@ -20,7 +21,9 @@
     "@eslint/js": "^9.27.0",
     "@shikijs/types": "^3.4.2",
     "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
     "jiti": "^2.4.2",
+    "prettier": "^3.5.3",
     "publint": "^0.3.12",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.32.1"
