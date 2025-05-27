@@ -1,7 +1,7 @@
 import { h } from 'hastscript'
 import type { ShikiTransformer } from '@shikijs/types'
 
-export type Options = {
+export interface Options {
   toggle?: number
 }
 
