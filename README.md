@@ -2,6 +2,12 @@
 
 A [Shiki Transformer](https://shiki.style/guide/transformers) that adds a Copy button.
 
+## Used by
+
+<a href="https://github.com/joshnuss/shiki-transformer-copy-button/network/dependents">
+  <img src="https://dependents.info/joshnuss/shiki-transformer-copy-button/image.svg" />
+</a>
+
 ## Install
 
 Install the package:
