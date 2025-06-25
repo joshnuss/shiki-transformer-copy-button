@@ -15,9 +15,8 @@ export function addCopyButton(options: Options = {}): ShikiTransformer {
         'button',
         {
           class: 'copy',
-          'data-code': this.source,
           onclick: `
-          navigator.clipboard.writeText(this.dataset.code);
+          navigator.clipboard.writeText(this.parentElement.innerText);
           this.classList.add('copied');
           setTimeout(() => this.classList.remove('copied'), ${toggleMs})
         `
