@@ -1,13 +1,19 @@
 import { h } from 'hastscript'
 import type { ShikiTransformer } from '@shikijs/types'
+import type { HTMLAttributes } from 'astro/types'
 
 export interface Options {
   toggle?: number;
-  title?: string;
+  button?: Omit<HTMLAttributes<'button'>, 'onclick' | 'class'> & {
+    className?: HTMLAttributes<'button'>['class'];
+  };
 }
 
 export function addCopyButton(options: Options = {}): ShikiTransformer {
   const toggleMs = options.toggle || 3000
+  const { className: optionsClassName, ...buttonAttributes } =
+    options.button || {}
+  const className = optionsClassName || 'copy'
 
   return {
     name: 'shiki-transformer-copy-button',
@@ -15,8 +21,8 @@ export function addCopyButton(options: Options = {}): ShikiTransformer {
       const button = h(
         'button',
         {
-          title: options.title,
-          class: 'copy',
+          ...buttonAttributes,
+          class: className,
           onclick: `
           navigator.clipboard.writeText(this.parentElement.innerText);
           this.classList.add('copied');
