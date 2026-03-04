@@ -25,7 +25,13 @@ import { addCopyButton } from 'shiki-transformer-copy-button'
 // optional
 const options = {
   // delay time from "copied" state back to normal state
-  toggle: 2000
+  toggle: 2000,
+
+  // optional: customize button attributes
+  button: {
+    class: 'my-copy-button',
+    title: 'Copy'
+  }
 }
 
 export async function highlight(code, lang) {
