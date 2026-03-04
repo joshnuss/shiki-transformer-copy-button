@@ -3,6 +3,7 @@ import type { ShikiTransformer } from '@shikijs/types'
 
 export interface Options {
   toggle?: number
+  button?: Omit<HTMLButtonElement, 'onclick'>
 }
 
 export function addCopyButton(options: Options = {}): ShikiTransformer {
@@ -14,7 +15,8 @@ export function addCopyButton(options: Options = {}): ShikiTransformer {
       const button = h(
         'button',
         {
-          class: 'copy',
+          ...(options.button || {}),
+          class: options.button?.className || 'copy',
           onclick: `
           navigator.clipboard.writeText(this.parentElement.innerText);
           this.classList.add('copied');
