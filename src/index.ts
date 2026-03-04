@@ -1,9 +1,9 @@
-import { h } from 'hastscript'
+import { h, type Properties } from 'hastscript'
 import type { ShikiTransformer } from '@shikijs/types'
 
 export interface Options {
   toggle?: number
-  button?: Omit<HTMLButtonElement, 'onclick'>
+  button?: Omit<Properties, 'onclick'>
 }
 
 export function addCopyButton(options: Options = {}): ShikiTransformer {
@@ -16,7 +16,7 @@ export function addCopyButton(options: Options = {}): ShikiTransformer {
         'button',
         {
           ...(options.button || {}),
-          class: options.button?.className || 'copy',
+          class: options.button?.class || 'copy',
           onclick: `
           navigator.clipboard.writeText(this.parentElement.innerText);
           this.classList.add('copied');
